@@ -24,10 +24,18 @@ body {
 	border: 1px solid #303030;
 	padding: 15px;
 	background-color: #eee;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+button {
+	width: 20%;
+	flex-grow: 1;
+	margin: 5px;
 }
 
 #vid-element {
-	width: 800px;
 	height: 600px;
 	background-color: #666;
 }

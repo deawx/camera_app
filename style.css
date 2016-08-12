@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header {
+	width: 100%;
+	height: 10vh;
+	background-color: #303030;
+}
+
+.body {
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+#vid-container {
+	border: 1px solid #303030;
+	padding: 15px;
+	background-color: #eee;
+}
+
+#vid-element {
+	width: 800px;
+	height: 600px;
+	background-color: #666;
+}
+
+.footer {
+	width: 100%;
+	background-color: #666;
+	height: 7.5vh;
+}

@@ -15,11 +15,12 @@ if (navigator.getUserMedia) {
 
 function handleVideo(stream) {
 	video.src = window.URL.createObjectURL(stream);
-	var options = {
-		type: 'video',
-		frameInterval: 20
-	};
 	var recordRTC = RecordRTC(stream, options);
+	var recordedBlob;
+	var options = {
+	type: 'video',
+	frameInterval: 20
+};
 
 	recordButton.onclick = function() {
 		recordButton.disabled = true;
@@ -34,10 +35,6 @@ function handleVideo(stream) {
 		stopButton.disabled = true;
 		recordButton.disabled = false;
 		recordRTC.stopRecording(function(videoURL) {
-
-			var recordedBlob = recordRTC.getBlob();
-			recordRTC.getDataURL(function(dataURL) {});
-
 			viewButton.onclick = function() {
 				window.open(videoURL, '_blank');
 			}
@@ -51,4 +48,5 @@ function handleVideo(stream) {
 
 function videoError(e) {
 	//Error handler
+	alert('Unable to access Webcam');
 }

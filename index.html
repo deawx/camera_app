@@ -7,16 +7,28 @@
 </head>
 
 <body>
-	<div class="header">
+	<div class='header'>
 	</div>
 
-	<div class="body">
-		<div id="vid-container">
-			<video autoplay="true" id="vid-element">
+	<div class='body'>
+		<div id='vid-container'>
+			<button id='record'>Start Recording</button>
+			<button id='stop' disabled>Stop Recording</button>
+			<button id='save' disabled>Save</button>
+			<button id='view' disabled>View</button>
+
+			<video id='vid-element' muted autoplay>
 			</video>
+			<canvas style="display:none;"></canvas>
 		</div>
 	</div>
 
-	<div class="footer">
+	<div class='footer'>
 	</div>
+
+	<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/gif-recorder.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/getScreenId.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
+	<script src='script.js'></script>
 </body>
